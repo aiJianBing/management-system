@@ -1,0 +1,433 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "系统"
+    BEGIN
+        MENUITEM "退出",                          IDM_EXIT
+    END
+    POPUP "药品信息"
+    BEGIN
+        MENUITEM "添加药品信息",                      ID_ADDSTU
+        MENUITEM "修改药品信息",                      IDM_MODISTU
+        MENUITEM "查询药品信息",                      IDM_QUERYSTU
+    END
+    POPUP "药品入库管理"
+    BEGIN
+        MENUITEM "添加入库",                        ID_ADDSTU1
+        MENUITEM "修改入库",                        IDM_MODISTU1
+        MENUITEM "查询入库信息",                      IDM_QUERYSTU1
+    END
+    POPUP "药品出库管理"
+    BEGIN
+        MENUITEM "添加出库",                        ID_ADDSTU2
+        MENUITEM "修改出库",                        IDM_MODISTU2
+        MENUITEM "查询出库信息",                      IDM_QUERYSTU2
+    END
+    POPUP "取药记录"
+    BEGIN
+        MENUITEM "添加",                          ID_addQY
+        MENUITEM "修改/删除",                       ID_DeleQY
+        MENUITEM "查询",                          ID_QueryQY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ADDSTU DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "添加药品信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,208,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    LTEXT           "编号",IDC_STATIC,21,20,48,24
+    LTEXT           "名称",IDC_STATIC,170,25,48,8
+    LTEXT           "药剂",IDC_STATIC,22,51,43,15
+    LTEXT           "售价",IDC_STATIC,169,50,58,20
+    LTEXT           "有效期 ",IDC_STATIC,20,84,58,20
+    LTEXT           "详细说明",IDC_STATIC,168,84,58,20
+    EDITTEXT        IDC_SNO,56,21,75,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SNAME,202,22,75,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STYBE,57,49,75,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SPRICE,200,49,75,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SVALIDITY,55,82,75,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SEXPLAIN,208,87,87,63,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "药品入库管理"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    LTEXT           "名称",IDC_STATIC,166,22,73,21
+    LTEXT           "编号",IDC_STATIC,15,17,73,21
+    LTEXT           "入库时间",IDC_STATIC,18,50,33,21
+    LTEXT           "库存数量",IDC_STATIC,15,79,73,21
+    LTEXT           "入库数量",IDC_STATIC,157,50,42,17
+    EDITTEXT        IDC_SNO1,69,19,87,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SNAME1,190,22,87,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TIME1,69,49,87,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUMBER1,191,50,87,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUMBER2,66,76,87,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "药品出库管理"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    LTEXT           "编号",IDC_STATIC,19,27,70,20
+    LTEXT           "名称",IDC_STATIC,137,25,70,20
+    LTEXT           "出库时间",IDC_STATIC,17,58,70,20
+    LTEXT           "出库数量",IDC_STATIC,136,54,70,20
+    LTEXT           "库存数量",IDC_STATIC,17,87,70,20
+    EDITTEXT        IDC_SNO2,54,23,79,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SNAME2,179,27,79,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TIME2,53,56,79,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUMBER3,179,56,79,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUMBER4,53,82,79,17,ES_AUTOHSCROLL
+END
+
+IDD_xiu DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "药品信息删除"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "删除",IDOK,185,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,256,161,50,14
+    LTEXT           "编号",IDC_STATIC,17,51,59,20
+    LTEXT           "名称",IDC_STATIC,147,51,59,20
+    LTEXT           "药剂",IDC_STATIC,17,70,59,20
+    LTEXT           "售价",IDC_STATIC,145,71,59,20
+    LTEXT           "有效期",IDC_STATIC,17,89,59,20
+    LTEXT           "详细说明",IDC_STATIC,145,90,59,20
+    EDITTEXT        IDC_EDIT2,42,51,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,175,50,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,43,70,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,175,70,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,43,86,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,181,91,101,55,ES_AUTOHSCROLL
+    PUSHBUTTON      "上一条",IDC_BUTTON1,171,20,50,14
+    PUSHBUTTON      "下一条",IDC_BUTTON2,239,20,50,14
+    PUSHBUTTON      "保存修改",IDC_xiu,114,161,50,14
+    LTEXT           "编号：",IDC_STATIC,7,18,25,10
+    EDITTEXT        IDC_EDIT12,33,17,82,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "查询",IDC_BUTTON3,117,18,40,13
+END
+
+IDD_QUERYSTU DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "药品信息查询"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    CONTROL         "",IDC_LIST3,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,17,302,123
+END
+
+IDD_RK DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "入库查询"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,21,302,119
+    PUSHBUTTON      "删除",IDC_D11,30,153,70,22
+END
+
+IDD_CK DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "出库查询"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,17,302,129
+    PUSHBUTTON      "删除",IDC_d1,7,155,71,20
+END
+
+IDD_CKdele DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "出库删除修改"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    LTEXT           "编号",IDC_STATIC,7,48,61,16
+    LTEXT           "出库时间",IDC_STATIC,7,74,61,16
+    LTEXT           "出库数量",IDC_STATIC,135,73,61,16
+    LTEXT           "名称",IDC_STATIC,135,51,61,16
+    LTEXT           "库存数量",IDC_STATIC,7,102,61,16
+    EDITTEXT        IDC_EDIT1,45,49,83,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,176,48,84,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,45,70,82,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,175,74,83,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,44,96,86,17,ES_AUTOHSCROLL
+    PUSHBUTTON      "上一条",IDC_BUTTON2,141,10,50,14
+    PUSHBUTTON      "下一条",IDC_BUTTON3,229,10,50,14
+    PUSHBUTTON      "修改",IDC_BUTTON4,29,154,62,21
+    PUSHBUTTON      "删除",IDC_BUTTON5,113,154,55,21
+END
+
+IDD_RKde DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "入库删除修改"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "删除",IDOK,173,153,57,22
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    LTEXT           "编号",IDC_STATIC,7,48,61,16
+    LTEXT           "入库时间",IDC_STATIC,7,74,61,16
+    LTEXT           "入库数量",IDC_STATIC,135,73,61,16
+    LTEXT           "名称",IDC_STATIC,135,51,61,16
+    LTEXT           "库存数量",IDC_STATIC,7,102,61,16
+    EDITTEXT        IDC_EDIT1,45,49,83,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,176,48,84,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,45,70,82,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,175,74,83,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,44,96,86,17,ES_AUTOHSCROLL
+    PUSHBUTTON      "上一条",IDC_BUTTON2,141,10,50,14
+    PUSHBUTTON      "下一条",IDC_BUTTON3,229,10,50,14
+    PUSHBUTTON      "修改",IDC_BUTTON4,29,154,68,21
+END
+
+IDD_ADDQY DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "添加取药记录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    LTEXT           "科室",IDC_STATIC,7,30,66,15
+    LTEXT           "主治医生",IDC_STATIC,7,60,66,15
+    LTEXT           "职工号",IDC_STATIC,159,33,66,15
+    LTEXT           "病人",IDC_STATIC,158,60,66,15
+    LTEXT           "取药记录",IDC_STATIC,7,97,66,15
+    EDITTEXT        IDC_EDIT1,49,30,80,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,197,32,80,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,49,58,80,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,197,58,80,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,46,94,152,45,ES_AUTOHSCROLL
+    LTEXT           "取药时间",IDC_STATIC,7,78,33,8
+    EDITTEXT        IDC_EDIT2,48,78,85,13,ES_AUTOHSCROLL
+END
+
+IDD_QYdele DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "删除/修改取药记录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "删除",IDOK,168,158,56,17
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    LTEXT           "科室",IDC_STATIC,7,46,64,18
+    LTEXT           "职工号",IDC_STATIC,163,47,64,18
+    LTEXT           "主治医生",IDC_STATIC,7,68,64,18
+    LTEXT           "病人",IDC_STATIC,165,71,64,18
+    LTEXT           "取药记录",IDC_STATIC,7,106,64,18
+    EDITTEXT        IDC_EDIT1,48,41,83,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,192,45,83,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,48,66,83,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,193,67,83,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,45,105,139,39,ES_AUTOHSCROLL
+    PUSHBUTTON      "上一条",IDC_BUTTON1,161,15,54,15
+    PUSHBUTTON      "下一条",IDC_BUTTON2,233,15,54,15
+    PUSHBUTTON      "保存修改",IDC_BUTTON3,61,158,52,17
+    LTEXT           "取药时间",IDC_STATIC,7,88,33,8
+    EDITTEXT        IDC_EDIT2,46,86,84,16,ES_AUTOHSCROLL
+END
+
+IDD_Qqy DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "取药查询"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,161,50,14
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,24,302,116
+    PUSHBUTTON      "删除",IDC_BUTTON1,87,154,57,21
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ADDSTU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_xiu, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_QUERYSTU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_RK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_CK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_CKdele, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_RKde, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_ADDQY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_QYdele, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_Qqy, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
